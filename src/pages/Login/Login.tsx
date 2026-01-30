@@ -6,7 +6,6 @@ import { Password } from "primereact/password";
 import { Button } from "primereact/button";
 import { Toast } from "primereact/toast";
 import { useNavigate } from "react-router-dom";
-import { FloatLabel } from "primereact/floatlabel";
 
 import { loginSchema, type LoginFormData } from "./loginSchema";
 import { useAuth } from "../../hooks/useAuth";
