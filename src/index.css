@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@import "primereact/resources/themes/lara-light-cyan/theme.css";
+@import 'primeicons/primeicons.css';
+
+.p-password .p-icon-field {
+  width: 100% !important;
+}
