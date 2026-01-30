@@ -56,5 +56,6 @@ It connects with Fake Store API to perform CRUD operations (Create, Read, Update
 
 
 ## 🚀 Login Credentials
+  ```bash 
   username: mor_2314
   password: 83r5^_
