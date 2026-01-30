@@ -1,73 +1,60 @@
-# React + TypeScript + Vite
+# Product Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Product Management application built using React, TypeScript, and PrimeReact.  
+It connects with Fake Store API to perform CRUD operations (Create, Read, Update, Delete) on products.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 Features
 
-## React Compiler
+### ✅ Part 1: Login
+- Login using Fake Store API endpoint  
+  `https://fakestoreapi.com/auth/login`
+- Stores token in localStorage
+- Shows toast notification on success
+- Redirects to Products page after login
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### ✅ Part 2: Product Management
+- Fetch and display products from  
+  `https://fakestoreapi.com/products`
+- Add new product using POST request
+- Edit product using PUT request
+- Delete product using DELETE request
+- Shows loading skeleton while fetching data
+- Uses PrimeReact components for UI
+- Basic form validation using Zod
+- Protected route: users cannot access Products without login
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧰 Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React (TypeScript)
+- PrimeReact
+- TailwindCSS
+- Axios
+- React Router
+- React Hook Form
+- Zod
+- Fake Store API
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Setup & Run Locally
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone repository  
+   ```bash
+   git clone https://github.com/Heyram33/Product-Management-App.git
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. Install dependencies  
+   ```bash
+   npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Start the development server  
+   ```bash
+   npm run dev
+
+
+## 🚀 Login Credentials
+  username: mor_2314
+  password: 83r5^_
