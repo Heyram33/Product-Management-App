@@ -11,7 +11,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/login"
+          path="/"
           element={token ? <Navigate to="/products" /> : <Login />}
         />
 
@@ -24,7 +24,7 @@ const App = () => {
           }
         />
 
-        <Route path="*" element={<Navigate to="/login" />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );
